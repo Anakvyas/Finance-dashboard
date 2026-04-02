@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Satoshi", "Manrope", "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(34, 211, 238, 0.14), transparent 28%),
+    linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  transition: all 180ms ease;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(129, 140, 248, 0.7);
+  outline-offset: 2px;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.76) 0%, rgba(15, 23, 42, 0.58) 100%);
+  backdrop-filter: blur(18px);
+}
+
+.dashboard-card {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.26);
+  border-color: rgba(100, 116, 139, 0.9);
+}
+
+.background-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.3;
+  pointer-events: none;
+  animation: pulseFloat 4.8s ease-in-out infinite;
+  z-index: 50;
+  will-change: transform, opacity;
+  transform-origin: center;
+}
+
+.background-orb-left {
+  top: 10%;
+  left: -20px;
+  width: 320px;
+  height: 320px;
+  background: rgba(99, 102, 241, 0.5);
+}
+
+.background-orb-right {
+  top: 18%;
+  right: -10px;
+  width: 280px;
+  height: 280px;
+  background: rgba(236, 72, 153, 0.32);
+  animation-delay: 1.6s;
+}
+
+.background-orb-bottom {
+  bottom: 8%;
+  left: 28%;
+  width: 340px;
+  height: 340px;
+  background: rgba(34, 211, 238, 0.26);
+  animation-delay: 3.2s;
+}
+
+.animate-fade-in {
+  animation: fadeIn 420ms ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 480ms ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 220ms ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseFloat {
+  0%,
+  100% {
+    transform: scale(0.82);
+    opacity: 0.16;
+  }
+
+  50% {
+    transform: scale(1.28);
+    opacity: 0.42;
+  }
+}
