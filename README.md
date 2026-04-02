@@ -4,8 +4,8 @@ A responsive finance dashboard built for a Frontend Developer Intern assignment 
 
 ## Live Demo
 
-- Live Demo: `<add-your-deployment-link-here>`
-- Repository: `<add-your-github-repo-link-here>`
+- Live Demo: `https://finance-dashboard-beta-murex.vercel.app`
+- Repository: `https://github.com/Anakvyas/Finance-dashboard`
 
 ## Overview
 
@@ -51,8 +51,8 @@ The project uses mock data and frontend-only state management to demonstrate com
 ### Clone the project
 
 ```bash
-git clone <your-repository-url>
-cd finance-dashboard
+git clone https://github.com/Anakvyas/Finance-dashboard
+cd Finance-dashboard
 ```
 
 ### Install dependencies
